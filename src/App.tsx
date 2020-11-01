@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navigation} from "./components/Navigation/Navigation";
-import {MainContent} from "./components/MainContent/MainContent";
+import MainContent from "./components/MainContent/MainContent";
 
 
 const App: React.FC = () => {

@@ -1,18 +1,21 @@
 .navigation {
-  height: 100vh;
+  height: 100%;
   width: 200px;
   background: #000;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
   &__logo {
     margin-top: 30px;
     height: 140px;
     width: 140px;
-    background: #ee6817;
+    background: #ffcc00;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    border-radius: 2px;
   }
   &__title {
     color: #000;
@@ -26,5 +29,67 @@
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+  &__social {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 30px;
+  }
+  &__social-icon {
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    width: 40px;
+    br {
+      display: none;
+    }
+    &__logo {
+      width: 26px;
+      margin-top: 18px;
+      height: 106px;
+    }
+    &__logo-img {
+      display: none;
+    }
+    &__name {
+      display: none;
+    }
+    &__title {
+      transform: rotate(270deg);
+      margin-right: 1px;
+      font-size: 1.4rem;
+    }
+    &__social {
+      flex-direction: column;
+      width: auto;
+      bottom: 18px;
+    }
+    &__link {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-height: 648px) {
+  .navigation {
+    &__logo {
+      margin-top: 3px;
+      height: 84px;
+      width: 22px;
+    }
+    &__social {
+      bottom: 0;
+    }
+    &__social-icon {
+      height: 18px;
+    }
+    &__title {
+      font-size: 1.1rem;
+    }
   }
 }
