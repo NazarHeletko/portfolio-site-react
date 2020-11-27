@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
+  z-index: 1;
   &__logo {
     margin-top: 30px;
     height: 140px;
@@ -45,6 +46,7 @@
 @media screen and (max-width: 768px) {
   .navigation {
     width: 40px;
+    position: fixed;
     br {
       display: none;
     }
@@ -83,7 +85,7 @@
       width: 22px;
     }
     &__social {
-      bottom: 0;
+      display: none;
     }
     &__social-icon {
       height: 18px;
@@ -91,5 +93,36 @@
     &__title {
       font-size: 1.1rem;
     }
+  }
+}
+
+@media screen and (max-height: 430px) {
+  .navigation {
+    &__logo {
+      height: 64px;
+    }
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) and (max-height: 648px) {
+  .navigation {
+    &__logo {
+      width: 140px;
+      margin-top: 10px;
+      height: 44px;
+    }
+    &__logo-img {
+      display: none;
+    }
+    &__name {
+      display: none;
+    }
+    br {
+      display: none;
+    }
+  }
+}
+@media (orientation: landscape)  {
+  .navigation {
+    height: 100vh;
   }
 }

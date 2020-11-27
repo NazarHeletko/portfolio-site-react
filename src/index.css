@@ -3,4 +3,18 @@
 
 body {
    overflow-x: hidden;
+   background-color: black;
+}
+
+::-webkit-scrollbar {
+   width: 5px;
+}
+
+::-webkit-scrollbar-track {
+   background: rgba(60, 60, 60, 0.81);
+}
+
+::-webkit-scrollbar-thumb {
+   background: #5f5f61;
+   height: 50%;
 }

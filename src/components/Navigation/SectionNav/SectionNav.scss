@@ -3,11 +3,10 @@
   padding-top: 36px;
   &__list {
     list-style: none;
-    padding: 0;
+    padding: 12px 0;
   }
   &__item {
     display: flex;
-    justify-content: center;
     color: #aaaaaa;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -29,6 +28,9 @@
     height: 22px;
     display: none;
   }
+  &__mobile-link {
+    padding: 16px 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -41,6 +43,9 @@
     &__text {
       display: none;
     }
+    &__item {
+      padding: 16px 0;
+    }
   }
 }
 
@@ -51,6 +56,27 @@
     }
     &__icon {
       height: 18px;
+    }
+    &__mobile-link {
+      padding: 10px 0;
+    }
+  }
+}
+
+@media screen and (max-height: 430px) {
+  .section-nav {
+    &__list {
+      padding: 5px 0;
+    }
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) and (max-height: 648px) {
+  .section-nav {
+    position: absolute;
+    bottom: 10px;
+    &__item {
+      justify-content: center;
     }
   }
 }

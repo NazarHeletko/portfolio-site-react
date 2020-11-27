@@ -2,4 +2,68 @@
   position: absolute;
   top: 0;
   display: flex;
+
+  h1 {
+    margin: 0
+  }
+}
+
+.about-section {
+  padding: 70px;
+  width: 50%;
+}
+
+.skills-section {
+  padding: 70px;
+  width: 100%;
+  box-sizing: border-box;
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+}
+
+
+.personal-data {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    border-bottom: 1px solid rgba(235, 235, 235, 0.1);
+    padding: 12px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 22px;
+  }
+  &__email-link {
+    text-decoration: none;
+    color: #aaaaaa;
+    transition: color .2s ease-out;
+    &:hover {
+      color: #ffcc00;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    width: calc(100% - 40px);
+    flex-direction: column;
+  }
+  .about-section {
+    padding: 70px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  .about-section {
+    padding: 30px;
+  }
 }

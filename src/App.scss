@@ -2,3 +2,9 @@
 .app {
   position: relative;
 }
+
+@media (orientation: landscape) {
+  .app {
+    overflow-x: hidden;
+  }
+}
